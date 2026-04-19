@@ -1,0 +1,16 @@
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\bin\Release\net8.0-windows\TekilKurulumOyun.exe
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\bin\Release\net8.0-windows\TekilKurulumOyun.deps.json
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\bin\Release\net8.0-windows\TekilKurulumOyun.runtimeconfig.json
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\bin\Release\net8.0-windows\TekilKurulumOyun.dll
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\bin\Release\net8.0-windows\TekilKurulumOyun.pdb
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.Form1.resources
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.csproj.GenerateResource.cache
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.AssemblyInfoInputs.cache
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.AssemblyInfo.cs
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.csproj.CoreCompileInputs.cache
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.dll
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\refint\TekilKurulumOyun.dll
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.pdb
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\TekilKurulumOyun.genruntimeconfig.cache
+C:\Users\ASUS1\source\repos\TekilKurulumOyun\TekilKurulumOyun\obj\Release\net8.0-windows\ref\TekilKurulumOyun.dll
