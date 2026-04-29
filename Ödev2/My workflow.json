@@ -1,0 +1,135 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "5d09beb9-7b2a-4758-aaae-c5c58837ce96",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM HamVeriler;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftSql",
+      "typeVersion": 1.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "c95a5b5f-1d7a-486f-8379-1b0387a7f839",
+      "name": "Microsoft SQL",
+      "credentials": {
+        "microsoftSql": {
+          "id": "99cTNRmf95H212v7",
+          "name": "Microsoft SQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "78901568-312f-464a-bfb1-eefda57e9765",
+              "name": "MusteriAdi",
+              "value": "={{ $json.MusteriAdi.trim().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ') }}\n",
+              "type": "string"
+            },
+            {
+              "id": "a949bf44-b0fb-4753-bd70-af89214e4bbb",
+              "name": "Durum",
+              "value": "={{ $json.Durum.trim().charAt(0).toUpperCase() + $json.Durum.trim().slice(1).toLowerCase() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "7d38ac2e-acfe-4373-adbc-58ff0ec907e1",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO TemizMusteriler (MusteriAdi, Eposta, Durum)\nVALUES ('{{ $json.MusteriAdi }}', '{{ $('Microsoft SQL').item.json.Eposta }}', '{{ $json.Durum }}');",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftSql",
+      "typeVersion": 1.1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "e1928ede-c669-46f1-a64b-a88d76336a33",
+      "name": "Microsoft SQL1",
+      "credentials": {
+        "microsoftSql": {
+          "id": "99cTNRmf95H212v7",
+          "name": "Microsoft SQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SQL": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SQL1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "c87cb635-e158-4e63-a7a7-40f874373434",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f744a9f53585f6d666febd501134267b8fb592fac9900621886ae4c6db684355"
+  },
+  "id": "ZQZkDz465LV97xaC",
+  "tags": []
+}
